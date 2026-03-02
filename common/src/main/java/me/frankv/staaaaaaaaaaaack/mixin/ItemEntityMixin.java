@@ -45,7 +45,7 @@ public abstract class ItemEntityMixin extends Entity {
 
 
     @Inject(
-            method = "<init>(Lnet/minecraft/world/entity/item/ItemEntity;)V",
+            method = "<init>(Lnet/minecraft/entity/EntityType;Lnet/minecraft/world/World;Lorg/spongepowered/asm/mixin/injection/callback/CallbackInfo;)V",
             at = @At("RETURN")
     )
     private void constructorSetExtraCountInject(ItemEntity itemEntity, CallbackInfo ci) {
